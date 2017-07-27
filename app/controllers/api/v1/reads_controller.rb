@@ -1,5 +1,9 @@
 class Api::V1::ReadsController < ApplicationController
 
+  def index
+    render json: Read.top_links
+  end
+
   def create
     read = Read.new(read_params)
     if read.save
@@ -13,5 +17,4 @@ class Api::V1::ReadsController < ApplicationController
   def read_params
     params.permit(:url)
   end
-
 end
