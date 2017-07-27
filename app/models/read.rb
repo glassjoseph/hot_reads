@@ -1,0 +1,3 @@
+class Read < ApplicationRecord
+  
+end
