@@ -22,7 +22,7 @@ RSpec.describe "it returns top ten most read links" do
       Read.create(url: "https://www.random6.com")
 
 
-      get ("/api/v1/top_links")
+      get ("/api/v1/reads")
 
       top_links = JSON.parse(response.body)
 
