@@ -30,6 +30,7 @@ RSpec.describe Read, type: :model do
     Read.create(url: "https://www.random4.com")
     Read.create(url: "https://www.random5.com")
     Read.create(url: "https://www.random6.com")
+    Read.create(url: "https://www.random7.com")
 
     top_links = Read.top_links
 
@@ -69,15 +70,15 @@ RSpec.describe Read, type: :model do
     Read.create(url: "https://www.random4.com")
     Read.create(url: "https://www.random5.com")
     Read.create(url: "https://www.random6.com")
+    Read.create(url: "https://www.random7.com")
 
     top_links = Read.top_links
 
-    binding.pry
     expect(top_links.class).to eq(Array)
-    expect(top_links[0]).to eq("https://www.wikipedia.io")
+    expect(top_links[0]).to eq("https://www.wikipedia.com")
     expect(top_links[1]).to eq("https://www.amazon.com")
-    expect(top_links.include?("https://www.turing.com")).to be_false
-    expect(top_links.include?("https://www.google.com")).to be_false
+    expect(top_links.include?("https://www.turing.com")).to eq(false)
+    expect(top_links.include?("https://www.google.com")).to eq(false)
     expect(top_links.length).to eq(10)
   end
 end
