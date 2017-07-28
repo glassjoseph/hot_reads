@@ -3,6 +3,8 @@
 ## Summary
 Hot Reads is a simple api service that logs link traffic and can serve out a list of the most read links of the past 24 hours.
 
+Try it out [here](https://hotreads-jg.herokuapp.com/)
+
 
 ## To Clone: 
 
