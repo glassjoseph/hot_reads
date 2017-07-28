@@ -7,12 +7,16 @@ Hot Reads is a simple api service that logs link traffic and can serve out a lis
 ## To Clone: 
 
 `git clone git@github.com:glassjoseph/hot_reads.git`
+
 `cd hot_reads`
+
 `bundle install`
 
 ## To Set Up Database:
 `rake db:create`
+
 `rake db:migrate`
+
 `rake db:create`
 
 
